@@ -1,2 +1,2 @@
-# ramdustry
-Eats ram and crashes your game.
+# Computer Begone
+how to kill computer using mindustry
