@@ -1,4 +1,5 @@
 Events.on(ClientLoadEvent, () => {
+    Vars.ui.loadfrag.show();
     Timer.schedule(() => {
         Core.app.openURI("https://youtu.be/dQw4w9WgXcQ");
         Core.app.openURI("https://youtu.be/L_jWHffIx5E");
