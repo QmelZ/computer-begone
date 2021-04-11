@@ -1,0 +1,8 @@
+{
+    name: "computer-begone",
+    displayName: "Computer Begone",
+    description: "basically your computer will be gone",
+    author: "QmelZ",
+    version: 2,
+    minGameVersion: 126.2,
+}

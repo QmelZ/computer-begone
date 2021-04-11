@@ -1,8 +1,0 @@
-{
-    "name": "computer-begone",
-    "displayName": "Computer Begone",
-    "description": "Uses up your cpu and ram.\n TODO:\n- Make this use up gpu",
-    "author": "QmelZ",
-    "version": "1",
-    "minGameVersion": 120,
-}

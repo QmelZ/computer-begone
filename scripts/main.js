@@ -1,11 +1,42 @@
+const toast = require("libs/toast");
+const tables = require("tables");
+
+function begone(){
+    let dialog = new BaseDialog("Computer Begone");
+    dialog.addCloseButton();
+    
+    let others = destructive();
+    dialog.buttons.button("[#f00]Destructive[]", () => {
+        if(Vars.mods.locateMod("js-unblacklist")){
+            others.show();
+            dialog.hide();
+        }else{
+            toast(Icon.cancel, "[accent]install js unblacklister [green](QmelZ/js)[] to access the destructive features[]");
+        }
+    });
+    
+    tables.main(dialog.cont);
+    
+    return dialog;
+}
+
+function destructive(){
+    let dialog = new BaseDialog("Computer Begone");
+    dialog.addCloseButton();
+    
+    tables.destructive(dialog.cont);
+    
+    return dialog;
+}
+
 Events.on(ClientLoadEvent, () => {
-    Vars.ui.loadfrag.show();
-    Timer.schedule(() => {
-        Core.app.openURI("https://youtu.be/dQw4w9WgXcQ");
-        Core.app.openURI("https://youtu.be/L_jWHffIx5E");
-        Core.app.openURI("https://youtu.be/gy1B3agGNxw");
-        Core.app.openURI("https://youtu.be/y6120QOlsfU");
-        Core.app.openURI("https://youtu.be/iLBBRuVDOo4");
-        Core.app.openURI("https://youtu.be/hH9M-m3WD0g");
-    }, 0, 0);
+    let dialog = begone();
+    Vars.ui.menuGroup.children.get(0).fill(cons(t => {
+        t.top().right();
+        t.button(
+            "Computer Begone",
+            Icon.cancel,
+            () => dialog.show()
+        ).size(210, 64);
+    }));
 });
