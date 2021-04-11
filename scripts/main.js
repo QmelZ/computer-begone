@@ -7,11 +7,12 @@ function begone(){
     
     let others = destructive();
     dialog.buttons.button("[#f00]Destructive[]", () => {
-        if(Vars.mods.locateMod("js-unblacklist")){
+        if(false){
             others.show();
             dialog.hide();
         }else{
-            toast(Icon.cancel, "[accent]install js unblacklister [green](QmelZ/js)[] to access the destructive features[]");
+            // toast(Icon.warning, "install js unblacklister [accent](QmelZ/js)[] to access the destructive features");
+            toast(Icon.warning, "destructive features aren't available yet");
         }
     });
     
